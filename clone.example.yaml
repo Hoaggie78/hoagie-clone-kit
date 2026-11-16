@@ -1,0 +1,25 @@
+# Copy to my-clone/clone.yaml and edit. Everything about YOUR clone lives in the my-clone/ folder, which git ignores.
+
+# One made-up word that will mean "this person" to the model. Lower case, no spaces, not a real word.
+trigger: alexclone
+
+# How the captions and prompts describe the person. Keep it to things that will NOT change between videos
+# (hair, build). Do not describe the face in detail: the LoRA learns the face from the footage.
+person: a man with short brown hair
+
+# What the person wears IN THE TRAINING FOOTAGE (used for the training captions).
+training_wardrobe: a plain black t-shirt
+
+# What the footage looks like. Leave as is if you followed docs/01-record-yourself.md.
+training_backdrop: a plain grey fabric backdrop
+training_lighting: soft, even studio lighting
+
+# Used when you RENDER new videos (docs/04-render.md). You can change these per video.
+render_wardrobe: a plain solid black crewneck sweater, completely blank, no logo, no print
+render_tone: warm, conversational, natural energy and easy pacing
+accent: in his own natural American accent        # the model can drift to another accent if you do not say
+
+# Words the model mispronounces, and how to spell them so it says them right. Add your own as you find them.
+say:
+  LoRA: Laura
+  "A.I.": "A.I."
